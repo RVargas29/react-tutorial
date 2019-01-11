@@ -17,12 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('products', 'ProductsController@index');
-
-Route::get('products/{product}', 'ProductsController@show');
-   
-Route::post('products', 'ProductsController@store');
- 
-Route::put('products/{product}', 'ProductsController@update');
- 
-Route::delete('products/{product}', 'ProductsController@delete');
+Route::get('projects', 'ProjectController@index');
+Route::post('projects', 'ProjectController@store');
+Route::get('projects/{id}', 'ProjectController@show');
+Route::put('projects/{project}', 'ProjectController@markCompleted');
+Route::post('tasks', 'TaskController@store');
+Route::put('tasks/{tasks}', 'TaskController@markCompleted');
