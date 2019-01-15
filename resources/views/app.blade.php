@@ -8,11 +8,7 @@
         <title>Laravel</title>
     </head>
     <body>        
-        <div class="container">
-            <h1 style="text-align:center;">Project manager APP</h1>
-            <div id="root"></div>            
-        </div>
-        <div id="displayed-product"></div>
+        <div id="root"></div>      
         <script src="{{mix('js/app.js')}}"></script>
     </body>
 </html>

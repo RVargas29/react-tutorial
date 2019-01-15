@@ -29,7 +29,7 @@ class ProjectController extends Controller
             'description' => $validatedData['description'],
         ]);
 
-        return response()->json($product, 201);
+        return response()->json($project, 201);
     }
 
     public function show($id) {
@@ -40,7 +40,7 @@ class ProjectController extends Controller
         return $project->toJson();
     }
 
-    public function markAsCompleted(Project $project) {
+    public function markCompleted(Project $project) {
         $project->is_completed = true;
         $project->update();
 
