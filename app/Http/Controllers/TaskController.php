@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     public function store(Request $request) {
-        $validatedData = $request->validate(['title' => 'required|max255']);
+        $validatedData = $request->validate(['title' => 'required|max:255']);
 
         $task = Task::create([
           'title' => $validatedData['title'],
@@ -22,6 +22,6 @@ class TaskController extends Controller
         $task->is_completed = true;
         $task->update();
 
-        return response()->json(['message' => 'Task completed'], 201);
+        return response()->json(['message' => 'Task completed', 'task' => $task], 201);
     }
 }

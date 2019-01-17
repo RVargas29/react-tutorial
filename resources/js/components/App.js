@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import ProjectsList from './Projects/ProjectsList';
 import AddProject from './Projects/AddProject';
+import ShowProject from './Projects/ShowProject';
 
 class App extends Component {
 
@@ -15,6 +16,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path='/' component={ProjectsList} />
                         <Route path='/create' component={AddProject} />
+                        <Route path='/:id' component={ShowProject} />
                     </Switch>
                 </div>
             </BrowserRouter>

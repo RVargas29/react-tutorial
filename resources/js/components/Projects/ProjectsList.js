@@ -31,7 +31,7 @@ class ProjectsList extends Component {
                         {projects.map(
                             project => (
                                 <li className="list-group-item" key={project.id}>
-                                    <Link to={`/$project.id`} >
+                                    <Link to={`/${project.id}`} >
                                         {project.name}
                                         <span className="badge badge-primary">
                                             {project.tasks_count}
